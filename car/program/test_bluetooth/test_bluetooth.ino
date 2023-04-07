@@ -50,7 +50,8 @@
 
 #include <SoftwareSerial.h>
 
-char received;
+// char received;
+byte received;
 
 SoftwareSerial BTHC08Serial(10, 11); // RX | TX
 
@@ -67,34 +68,59 @@ void loop()
   if (BTHC08Serial.available())
   {
     received = BTHC08Serial.read();
-    if (received == 'f')
+    Serial.println(received);
+    switch (received)
     {
+    case 0:
       Serial.println("forward");
-    }
-    else
-    {
-      if (received == 'b')
-      {
-        Serial.println("backward");
-      }
-      else
-      {
-        if (received == 'l')
-        {
-          Serial.println("left");
-        }
-        else
-        {
-          if (received == 'r')
-          {
-            Serial.println("right");
-          }
-          else
-          {
-            Serial.println("received something weird...");
-          }
-        }
-      }
+      break;
+    case 1:
+      Serial.println("backward");
+      break;
+    case 2:
+      Serial.println("left");
+      break;
+    case 3:
+      Serial.println("right");
+      break;
     }
   }
 }
+
+// void loop()
+// {
+//   // Keep reading from HC-08 and send to Arduino serial monitor
+//   if (BTHC08Serial.available())
+//   {
+//     received = BTHC08Serial.read();
+//     if (received == 'f')
+//     {
+//       Serial.println("forward");
+//     }
+//     else
+//     {
+//       if (received == 'b')
+//       {
+//         Serial.println("backward");
+//       }
+//       else
+//       {
+//         if (received == 'l')
+//         {
+//           Serial.println("left");
+//         }
+//         else
+//         {
+//           if (received == 'r')
+//           {
+//             Serial.println("right");
+//           }
+//           else
+//           {
+//             Serial.println("received something weird...");
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

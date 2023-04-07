@@ -8,7 +8,8 @@ async def mainLoop(client):
     win = pygame.display.set_mode((400, 400))
     pygame.display.set_caption("RC CAR")
 
-    keyboard_input = ""
+    # keyboard_input = ""
+    keyboard_input = -1
 
     run = True
     while run:
@@ -21,20 +22,20 @@ async def mainLoop(client):
         if keys[pygame.K_ESCAPE]:
             run=False
         if keys[pygame.K_UP]:
-            print("KUP")
-            keyboard_input = "f"
+            keyboard_input = 0
         if keys[pygame.K_DOWN]:
-            keyboard_input = "b"
+            keyboard_input = 1
         if keys[pygame.K_LEFT]:
-            keyboard_input = "l"
+            keyboard_input = 2
         if keys[pygame.K_RIGHT]:
-            keyboard_input = "r"
+            keyboard_input = 3
 
-        if keyboard_input != "":
-            bytes_to_send = bytearray(map(ord, keyboard_input))
-            keyboard_input = ""
+        if keyboard_input != -1:
+            # bytes_to_send = bytearray(map(ord, keyboard_input))
+            bytes_to_send = keyboard_input.to_bytes(1, "big")
+            print("Sending:", bytes_to_send)
+            keyboard_input = -1
             await client.write_gatt_char(write_characteristic, bytes_to_send)
-            print("Message sent!")
 
         pygame.display.update()
         pygame.time.delay(100)
