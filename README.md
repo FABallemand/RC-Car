@@ -6,11 +6,12 @@ Building a radio-controlled car from scratch!!
 
 ## 📚 Ressources
 
-### 🔧 Harware
-- DroneBot Wrokshop: [Controlling DC Motors with the L298N H Bridge and Arduino](https://www.youtube.com/watch?v=dyjo_ggEtVU&ab_channel=DroneBotWorkshop)
-- DroneBot Wrokshop: [Using Servo Motors with Arduino](https://www.youtube.com/watch?v=kUHmYKWwuWs&ab_channel=DroneBotWorkshop)
-- DroneBot Wrokshop: [Bluetooth & IR Remote - Elegoo Arduino Smart Robot Car Part 2](https://www.youtube.com/watch?v=DD8sYXKe268&ab_channel=DroneBotWorkshop)
+### 🔧 Hardware
+- DroneBot Workshop: [Controlling DC Motors with the L298N H Bridge and Arduino](https://www.youtube.com/watch?v=dyjo_ggEtVU&ab_channel=DroneBotWorkshop)
+- DroneBot Workshop: [Using Servo Motors with Arduino](https://www.youtube.com/watch?v=kUHmYKWwuWs&ab_channel=DroneBotWorkshop)
+- DroneBot Workshop: [Bluetooth & IR Remote - Elegoo Arduino Smart Robot Car Part 2](https://www.youtube.com/watch?v=DD8sYXKe268&ab_channel=DroneBotWorkshop)
 - [HC-08 Datasheet](http://www.hc01.com/downloads/HC-08A%20version%20english%20datasheet.pdf)
+- DroneBot Workshop: [Using the HC-SR04 Ultrasonic Distance Sensor with Arduino - Everything you need to know!](https://www.youtube.com/watch?v=6F1B_N6LuKw&ab_channel=DroneBotWorkshop)
 
 ### 💾 Software
 - MUO: [How to Manage Bluetooth Devices on Linux Using bluetoothctl](https://www.makeuseof.com/manage-bluetooth-linux-with-bluetoothctl/)
