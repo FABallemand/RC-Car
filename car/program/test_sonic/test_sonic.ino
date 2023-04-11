@@ -64,9 +64,11 @@ void setup()
   Serial.begin(9600);
 
   // Temperature-Humidity Sensor
-  if (! aht.begin()) {
+  if (!aht.begin())
+  {
     Serial.println("Could not find AHT10? Check wiring");
-    while (1) delay(10);
+    while (1)
+      delay(10);
   }
 }
 
